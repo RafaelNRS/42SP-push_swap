@@ -13,7 +13,7 @@ HEADER_PATH		= ./include/push_swap.h
 
 SRC_DIR			= ./src/
 SRC_CLIENT		= push_swap.c
-SRC_CLIENT_PATH	= ./src/push_swap.c ./src/swap_ops.c ./src/push_ops.c ./src/rotate_ops.c ./src/rev_rotate_ops.c
+SRC_CLIENT_PATH	= ./src/push_swap.c ./src/swap_ops.c ./src/push_ops.c ./src/rotate_ops.c ./src/rev_rotate_ops.c ./src/radix_sort.c ./src/stack_utils.c ./src/stack.c ./src/validate.c
 
 BIN						= ./bin/
 BINARY_OUT_PROJ		= ./bin/push_swap

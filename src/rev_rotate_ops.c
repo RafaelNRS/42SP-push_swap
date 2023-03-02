@@ -6,7 +6,7 @@
 /*   By: ranascim <ranascim@42.student.42sp.org.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 20:22:17 by ranascim          #+#    #+#             */
-/*   Updated: 2023/02/22 21:45:44 by ranascim         ###   ########.fr       */
+/*   Updated: 2023/03/02 12:11:50 by ranascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@
 
 static void	rev_rotate(t_stack **stack)
 {
-	t_stack *stack_tmp;
-	t_stack *stack_last;
-	t_stack *stack_blast;
+	t_stack	*stack_tmp;
+	t_stack	*stack_last;
+	t_stack	*stack_blast;
 
 	stack_last = get_last(*stack);
-	stack_blast = stack_last->prev;
-	
+	stack_blast = get_last_but_one(*stack);
 	stack_tmp = (*stack);
 	*stack = stack_last;
 	(*stack)->next = stack_tmp;
-	stack_tmp->prev = (*stack);
-	(*stack)->prev = NULL;
-	stack_blast->next = NULL;	
+	stack_blast->next = NULL;
 }
 
 void	rra(t_stack **stack_a)
