@@ -6,7 +6,7 @@
 /*   By: ranascim <ranascim@42.student.42sp.org.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 11:57:22 by ranascim          #+#    #+#             */
-/*   Updated: 2023/03/02 13:16:51 by ranascim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:19:17 by ranascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ int	is_integer(char **argv)
 	while (argv[i])
 	{
 		c = ft_itoa(ft_atoi(argv[i]));
-		if (ft_strncmp(c, argv[i], ft_strlen(argv[i])))
+		if (ft_strncmp(c, argv[i], ft_strlen(argv[i])) == 0)
 			i++;
 		else
 		{
 			free(c);
-			return (1);
+			return (0);
 		}
 		free(c);
 	}
-	return (0);
+	return (1);
 }
 
 int	is_duplicate(int argc, char **argv)

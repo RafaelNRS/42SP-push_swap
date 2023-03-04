@@ -6,12 +6,10 @@
 /*   By: ranascim <ranascim@42.student.42sp.org.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 19:53:48 by ranascim          #+#    #+#             */
-/*   Updated: 2023/03/02 13:24:50 by ranascim         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:49:49 by ranascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "push_swap.h"
 
 void	free_stacks(t_stack **stack)
@@ -55,6 +53,8 @@ int	main(int argc, char *argv[])
 	t_stack	*stack_a;
 	int		stack_size;
 
+	if (argc < 2)
+		return (1);
 	if (! is_integer(argv) || ! is_duplicate(argc, argv))
 	{
 		write(2, "Error\n", 6);
